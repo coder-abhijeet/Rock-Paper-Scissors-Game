@@ -130,23 +130,17 @@ function playGame(playerMove){
 localStorage.setItem('score',JSON.stringify(score));
 updateScore();
 
-const resultElement = document.querySelector('.js-result');
-resultElement.innerHTML = `${result}`;
-resultElement.style.color = result === 'You win.' ? 'lightgreen' : result === 'You lose.' ? 'tomato' : 'white';
+document.querySelector('.js-result').innerHTML=`${result}`;
 
 document.querySelector('.js-move').innerHTML=`You 
 <img src="Images/${playerMove}-image.webp" class="move-icon1"> <img src="Images/${computerMove}-image.webp" class="move-icon1"> Computer`;
 
 }
 
-function updateScore() {
-    const scoreElement = document.querySelector('.js-score');
-    scoreElement.innerHTML = `
-        <span style="color: lightgreen;">Wins: ${score.wins}</span> 
-        <span style="color: tomato;">Losses: ${score.losses}</span>
-        Ties: ${score.ties}`;
+function updateScore(){
+document.querySelector('.js-score')
+.innerHTML=`Wins:${score.wins},Losses:${score.losses},Ties:${score.ties}`;
 }
-
 function pickComputerMove(){
 const randomNumber=Math.random();
 let computerMove='';
