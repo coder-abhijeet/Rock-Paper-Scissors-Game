@@ -8,6 +8,8 @@ if (!score){
     };
 }
 
+// comment 
+
 function handleClick(){
     const buttonElement=document.querySelector('.auto-play-button');
     if (buttonElement.innerHTML==='Auto Play'){
